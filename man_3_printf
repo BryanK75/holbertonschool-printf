@@ -1,0 +1,11 @@
+NAME
+	_printf - format and print data
+
+SYNOPSIS
+	#include <stdio.h>
+	#include <stdarg.h>
+
+	int _printf(const char *format, ...);
+DESCRIPTION
+
+	The _printf function prints data to standar output.
