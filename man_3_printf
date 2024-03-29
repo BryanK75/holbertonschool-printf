@@ -6,6 +6,38 @@ SYNOPSIS
 	#include <stdarg.h>
 
 	int _printf(const char *format, ...);
-DESCRIPTION
 
-	The _printf function prints data to standar output.
+	.B #include "main.h"
+.sp
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The printf function sends formatted output to stdout. Printf function format string is a character string, beginnig and ending in it's initial shift state, if any. These arguments are placed used % operator
+
+.SS Compilation
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+
+.SH The conversion specifier:
+
+.IT
+.B d,i
+.RS int argument is converted to signed decimal integer.
+
+.IT
+.B s
+.RS stirng argument. _printf handles s conversion specifier if the argument value is not a pointer to a literal string.
+
+.IT
+.B c
+.RS integer or char argument converted to unsigned char.
+
+.IT
+.B %
+.RS % symbol is set without argument and conversion specification has to be'%%'.
+
+.IT
+.B p
+.RS the pointer is printed in hexidecimal format preceded by '0x'.
+
+.SH RETURN VALUE
+Return value is a n number of characters except NULL
